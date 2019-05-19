@@ -50,3 +50,7 @@ dependencies {
     //testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
     testCompile "org.mockito:mockito-core:2.7.22"
 }
+
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
