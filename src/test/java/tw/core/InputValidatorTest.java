@@ -14,7 +14,7 @@ public class InputValidatorTest {
     InputValidator inputValidator;
 
     @Before
-    public void setup(){
+    public void setUp(){
         inputValidator = new InputValidator();
     }
 
