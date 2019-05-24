@@ -3,7 +3,6 @@ package tw.controllers;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import tw.commands.InputCommand;
 import tw.core.Answer;
@@ -12,8 +11,7 @@ import tw.core.generator.AnswerGenerator;
 import tw.views.GameView;
 
 import static org.mockito.ArgumentMatchers.anyList;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 /**
  * 在GameControllerTest文件中完成GameController中对应的单元测试
  */
@@ -52,7 +50,7 @@ public class GameControllerTest {
         gameController.play(mockInputCommand);
 
         //验证是否显示历史猜测数据，而不是显示了什么历史猜测数据
-        verify(mockGameView, Mockito.times(6)).showGuessHistory(anyList());
+        verify(mockGameView, times(6)).showGuessHistory(anyList());
     }
 
     @Test
@@ -62,7 +60,7 @@ public class GameControllerTest {
 
         gameController.play(mockInputCommand);
 
-        verify(mockInputCommand, Mockito.times(1)).input();
+        verify(mockInputCommand, times(1)).input();
         verify(mockGameView).showGameStatus("success");
     }
 
@@ -74,7 +72,7 @@ public class GameControllerTest {
 
         gameController.play(mockInputCommand);
 
-        verify(mockInputCommand, Mockito.times(6)).input();
+        verify(mockInputCommand, times(6)).input();
         verify(mockGameView).showGameStatus("fail");
     }
 }
