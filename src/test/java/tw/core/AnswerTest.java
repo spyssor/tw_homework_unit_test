@@ -2,7 +2,6 @@ package tw.core;
 
 import org.junit.Before;
 import org.junit.Test;
-import tw.core.exception.OutOfRangeAnswerException;
 import tw.core.generator.AnswerGenerator;
 import tw.core.generator.RandomIntGenerator;
 import tw.core.model.GuessResult;
