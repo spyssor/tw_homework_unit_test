@@ -17,7 +17,7 @@ public class AnswerTest {
     private Game game;
 
     @Before
-    public void setup() throws Exception {
+    public void setUp() throws Exception {
         RandomIntGenerator randomIntGenerator = mock(RandomIntGenerator.class);
         when(randomIntGenerator.generateNums(9, 4)).thenReturn("1 2 3 4");
         AnswerGenerator answerGenerator = new AnswerGenerator(randomIntGenerator);
