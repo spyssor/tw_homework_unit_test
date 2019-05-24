@@ -15,7 +15,7 @@ public class RandomIntGeneratorTest {
     private RandomIntGenerator randomIntGenerator;
 
     @Before
-    public void setup(){
+    public void setUp(){
         randomIntGenerator = new RandomIntGenerator();
     }
 
